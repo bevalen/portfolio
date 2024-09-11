@@ -1,0 +1,94 @@
+Benjamin Valentin Resume
+
+CONTACT
+(678) 708-6066
+bjoel.valentin@gmail.com
+Cumming, GA, USA
+
+PERSONALITY
+- Myers Briggs: ENTJ- A, The Visionary
+- Enneagram: 8 Wing 7, The Maverick
+- DISC Assessment: High D, Low I, The Driver
+
+SKILLS
+
+TECHNICAL SKILLS
+- HTML, CSS, JavaScript, Typescript
+- React, Next.js, Tailwind CSS
+- Python, OpenAI, Stripe
+- Postgres, Supabase
+
+TOOL SKILLS
+- Jira, ClickUp, Slack, GitHub
+- Netlify, Vercel Deployment
+
+PROJECT MANAGEMENT SKILLS
+- Product Management
+- Coding Project Management
+- Version Control
+- Agile Development
+- Responsive Web Design
+
+HIGHLIGHTS
+- United States Marine, strategic thinker, strong personality but tactful and sympathetic
+- Committed to getting results, big dreamer, consistently hitting goals
+- Professional in all circumstances
+
+EXPERIENCE
+
+FOUNDER & CEO
+WedLaunch | Atlanta, GA  |  2023 - Present
+- Wedding vendor marketing agency
+- Built the first instant-booking wedding vendor marketplace MVP
+- Built on Next JS, Python, Tailwind CSS, Supabase, Stripe, OpenAI
+
+Founder & CEO
+FilmFlow, Inc | Cumming, GA  |  2022 - 2023
+- AI tech startup enabling filmmakers to write screenplays with AI
+- Raised $200,000 from angel investors
+- Built & launched MVP product within 6 weeks using React & Tailwind
+- Acquired 300 pilot users
+- Produced the first AI-written short film
+
+Head of Growth
+GetDoctor | Dunwoody, GA  |  2021 - 2023
+- Medical tech startup improving patient intake experience
+- Automated appointment booking process for clients
+- Built no-code prototypes for user testing
+- Made key hires for growth team expansion
+- Developed SOPs for product requirement documentation
+- Successfully migrated software team from Jira to ClickUp
+
+Head of Growth
+Band of Coders | Dunwoody, GA  |  2019 - 2020
+- Global software development firm
+- Spearheaded sales procedure optimization
+- Played pivotal role in talent acquisition
+- Engineered streamlined operational processes
+- Managed 200+ contractors nationally
+
+Founder & CEO
+ValCinema | Cumming, GA  |  2017 - 2021
+- National wedding photo + video company
+- Sold business four years after founding
+- Increased monthly revenue by 300% year over year
+- Managed operations for 99+ weddings/month nationally
+- Automated marketing, lead-qualifying, and sales scheduling
+- Managed all copywriting for marketing materials
+
+REFERENCES
+Bobby John
+Founder & CEO, Band of Coders
+(770) 286-8668  |  bobby@bandofcoders.com
+
+Bennett Jared
+Founder & CEO, MapleCross Wealth Management
+(931) 267-2545  |  bennett.jared@maplecross.com
+
+Wayne Craig
+VP & GM Sales and Operations US, TRI Dental Implants AG
+(513) 703-2066  |  wayne.craig2550@gmail.com
+
+Marty Grusznis
+Founder & CEO, Blu Couture
+(336) 608-2724  |  Marty@g-folk.com
