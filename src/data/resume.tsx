@@ -11,7 +11,7 @@ export const DATA = {
   description:
     "Software Engineer turned Entrepreneur. I love building things and helping people. Very active on Twitter.",
   summary:
-    "At the end of 2022, I quit my job as a software engineer to go fulltime into building and scaling my own SaaS businesses. In the past, [I pursued a double degree in computer science and business](/#education), [interned at big tech companies in Silicon Valley](https://www.youtube.com/watch?v=d-LJ2e5qKdE), and [competed in over 21 hackathons for fun](/#hackathons). I also had the pleasure of being a part of the first ever in-person cohort of buildspace called [buildspace sf1](https://buildspace.so/sf1).",
+    "Experienced entrepreneur and strategic thinker with a background in software engineering. As a former United States Marine, I am committed to achieving results and consistently hitting goals. I have founded and led multiple startups, including ValCinema, WedLaunch, and FilmFlow, where I built innovative products and grew revenues past $1M annually. My technical skills include Typescript, React/Next.js, and Python, among others. I thrive in fast-paced environments and excel in product management, agile development, and team leadership.",
   avatarUrl: "/me.png",
   skills: [
     "HTML",
@@ -73,11 +73,23 @@ export const DATA = {
       badges: [],
       location: "Atlanta, GA",
       title: "Founder & CEO",
-      logoUrl: "/atomic.png",
+      logoUrl: "/wedlaunch.png",
       start: "2023",
       end: "Present",
       description:
         "Wedding vendor marketing agency. Built the first instant-booking wedding vendor marketplace MVP using Next JS, Python, Tailwind CSS, Supabase, Stripe, OpenAI.",
+    },
+    {
+      company: "United States Marine Corps",
+      href: "https://www.marines.com",
+      badges: [],
+      location: "Cumming, GA",
+      title: "Infantry",
+      logoUrl: "/usmc.png",
+      start: "2019",
+      end: "2023",
+      description:
+        "Infantry. Served 5 years with extensive training and experience in various operational environments.",
     },
     {
       company: "FilmFlow, Inc",
@@ -85,7 +97,7 @@ export const DATA = {
       badges: [],
       location: "Cumming, GA",
       title: "Founder & CEO",
-      logoUrl: "/filmflow.png", // Placeholder logoUrl
+      logoUrl: "/filmflow.png",
       start: "2022",
       end: "2023",
       description:
@@ -97,11 +109,23 @@ export const DATA = {
       badges: [],
       location: "Dunwoody, GA",
       title: "Head of Growth",
-      logoUrl: "/getdoctor.png", // Placeholder logoUrl
+      logoUrl: "/getdoctor.jpg",
       start: "2021",
       end: "2023",
       description:
         "Medical tech startup improving patient intake experience. Automated appointment booking process and developed SOPs for product requirement documentation.",
+    },
+    {
+      company: "Metz-Kelly Holdings",
+      href: "https://metzkelly.com",
+      badges: [],
+      location: "Cumming, GA",
+      title: "Director of Operations",
+      logoUrl: "/metzkelly.png",
+      start: "2021",
+      end: "2021",
+      description:
+        "Family business operating 35+ rental properties. Managed operations for 35+ properties and 100+ tenants.",
     },
     {
       company: "Band of Coders",
@@ -109,7 +133,7 @@ export const DATA = {
       badges: [],
       location: "Dunwoody, GA",
       title: "Head of Growth",
-      logoUrl: "/bandofcoders.png", // Placeholder logoUrl
+      logoUrl: "/bandofcoders.jpg",
       start: "2019",
       end: "2020",
       description:
@@ -121,11 +145,23 @@ export const DATA = {
       badges: [],
       location: "Cumming, GA",
       title: "Founder & CEO",
-      logoUrl: "/valcinema.png", // Placeholder logoUrl
+      logoUrl: "/valcinema.png",
       start: "2017",
       end: "2021",
       description:
         "National wedding photo + video company. Increased monthly revenue by 300% year over year and managed operations for 99+ weddings/month nationally.",
+    },
+    {
+      company: "Coast to Coast Linens",
+      href: "",
+      badges: [],
+      location: "West Palm Beach, FL",
+      title: "Director of Operations",
+      logoUrl: "",
+      start: "2015",
+      end: "2017",
+      description:
+        "Coast to Coast Linens is a national commercial linens company. During my time there I managed a team of 100+ employees and was responsible for all daily operations.",
     },
   ],
   education: [
@@ -133,57 +169,43 @@ export const DATA = {
       school: "Buildspace",
       href: "https://buildspace.so",
       degree: "s3, s4, sf1, s5",
-      logoUrl: "/buildspace.jpg",
+      logoUrl: "",
       start: "2023",
       end: "2024",
     },
     {
-      school: "University of Waterloo",
-      href: "https://uwaterloo.ca",
+      school: "Florida School of Discipleship",
+      href: "https://floridadiscipleship.com",
       degree: "Bachelor's Degree of Computer Science (BCS)",
-      logoUrl: "/waterloo.png",
+      logoUrl: "",
       start: "2016",
       end: "2021",
-    },
-    {
-      school: "Wilfrid Laurier University",
-      href: "https://wlu.ca",
-      degree: "Bachelor's Degree of Business Administration (BBA)",
-      logoUrl: "/laurier.png",
-      start: "2016",
-      end: "2021",
-    },
-    {
-      school: "International Baccalaureate",
-      href: "https://ibo.org",
-      degree: "IB Diploma",
-      logoUrl: "/ib.png",
-      start: "2012",
-      end: "2016",
-    },
+    }
   ],
   projects: [
     {
-      title: "Chat Collect",
-      href: "https://chatcollect.com",
+      title: "Wedly",
+      href: "https://wedlaunch.com",
       dates: "Jan 2024 - Feb 2024",
       active: true,
       description:
-        "With the release of the [OpenAI GPT Store](https://openai.com/blog/introducing-the-gpt-store), I decided to build a SaaS which allows users to collect email addresses from their GPT users. This is a great way to build an audience and monetize your GPT API usage.",
+        "Wedly is the very first instant-booking wedding vendor marketplace that allows vendors to connect with brides and grooms.",
       technologies: [
         "Next.js",
         "Typescript",
+        "Python",
         "PostgreSQL",
-        "Prisma",
+        "Supabase",
         "TailwindCSS",
         "Stripe",
+        "OpenAI",
         "Shadcn UI",
         "Magic UI",
       ],
       links: [
         {
           type: "Website",
-          href: "https://chatcollect.com",
+          href: "https://wedlaunch.com",
           icon: <Icons.globe className="size-3" />,
         },
       ],
@@ -192,36 +214,32 @@ export const DATA = {
         "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
     },
     {
-      title: "Magic UI",
-      href: "https://magicui.design",
-      dates: "June 2023 - Present",
+      title: "Quivr",
+      href: "https://quivr.benvalentin.me",
+      dates: "August 2024",
       active: true,
       description:
-        "Designed, developed and sold animated UI components for developers.",
+        "Quivr is a simple AI tool to help you find Bible verses based on your current circumstances.",
       technologies: [
         "Next.js",
         "Typescript",
-        "PostgreSQL",
-        "Prisma",
         "TailwindCSS",
-        "Stripe",
-        "Shadcn UI",
-        "Magic UI",
+        "OpenAI",
       ],
       links: [
         {
           type: "Website",
-          href: "https://magicui.design",
+          href: "https://quivr.benvalentin.me",
           icon: <Icons.globe className="size-3" />,
         },
         {
           type: "Source",
-          href: "https://github.com/magicuidesign/magicui",
+          href: "https://github.com/bevalen/quivr",
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "",
-      video: "https://cdn.magicui.design/bento-grid.mp4",
+      image: "/quivr.png",
+      video: "",
     },
     {
       title: "llm.report",
