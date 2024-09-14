@@ -185,7 +185,7 @@ export const DATA = {
   projects: [
     {
       title: "Wedly",
-      href: "https://wedlaunch.com",
+      href: "https://bookwedly.com",
       dates: "Jan 2024 - Feb 2024",
       active: true,
       description:
@@ -205,7 +205,7 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "https://wedlaunch.com",
+          href: "https://bookwedly.com",
           icon: <Icons.globe className="size-3" />,
         },
       ],
