@@ -1,3 +1,5 @@
+"use client"; // Add this at the top of the file
+
 import { Dock, DockIcon } from "@/components/magicui/dock";
 import { ModeToggle } from "@/components/mode-toggle";
 import { buttonVariants } from "@/components/ui/button";
@@ -10,8 +12,59 @@ import {
 import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { DownloadIcon } from "lucide-react";
+import { useState } from 'react';
+import { format } from 'date-fns'; // Add this import at the top of the file
+
+const handleDownloadResume = async () => {
+  try {
+    const response = await fetch('/api/generate-resume');
+    if (!response.ok) throw new Error('Failed to generate resume');
+    const blob = await response.blob();
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "resume.pdf";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  } catch (error) {
+    console.error('Error downloading resume:', error);
+    // Handle error (e.g., show a notification to the user)
+  }
+};
 
 export default function Navbar() {
+  const [isGenerating, setIsGenerating] = useState(false);
+
+  const handleDownloadResume = async () => {
+    if (isGenerating) return;
+    setIsGenerating(true);
+    try {
+      const response = await fetch('/api/generate-resume');
+      if (!response.ok) throw new Error('Failed to generate resume');
+      const blob = await response.blob();
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      
+      // Generate the filename with the current date
+      const currentDate = format(new Date(), 'yyyy-MM-dd');
+      a.download = `Ben Valentin's Resume - ${currentDate}.pdf`;
+      
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error('Error downloading resume:', error);
+      // Handle error (e.g., show a notification to the user)
+    } finally {
+      setIsGenerating(false);
+    }
+  };
+
   return (
     <div className="pointer-events-none fixed inset-x-0 bottom-0 z-30 mx-auto mb-4 flex origin-bottom h-full max-h-14">
       <div className="fixed bottom-0 inset-x-0 h-16 w-full bg-background to-transparent backdrop-blur-lg [-webkit-mask-image:linear-gradient(to_top,black,transparent)] dark:bg-background"></div>
@@ -60,6 +113,25 @@ export default function Navbar() {
             </DockIcon>
           ))}
         <Separator orientation="vertical" className="h-full py-2" />
+        <DockIcon>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <button
+                onClick={handleDownloadResume}
+                className={cn(
+                  buttonVariants({ variant: "ghost", size: "icon" }),
+                  "size-12"
+                )}
+                disabled={isGenerating}
+              >
+                <DownloadIcon className="size-4" />
+              </button>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>{isGenerating ? "Generating..." : "Download Resume"}</p>
+            </TooltipContent>
+          </Tooltip>
+        </DockIcon>
         <DockIcon>
           <Tooltip>
             <TooltipTrigger asChild>
