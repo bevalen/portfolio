@@ -1,14 +1,16 @@
 'use server'
 
 import { DATA } from "@/data/resume";
-import { Document, Page, Text, View, StyleSheet, PDFDownloadLink } from '@react-pdf/renderer';
-import { pdf } from '@react-pdf/renderer';
+import { Document, Page, Text, View, StyleSheet, PDFDownloadLink, pdf } from '@react-pdf/renderer';
+
+// Remove the Font import and Font.register section
 
 const styles = StyleSheet.create({
     page: {
         flexDirection: 'column',
         backgroundColor: '#FFFFFF',
         padding: 30,
+        fontFamily: 'Times-Roman',
     },
     section: {
         margin: 10,
@@ -17,16 +19,37 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 24,
         marginBottom: 10,
+        fontFamily: 'Helvetica-Bold',
     },
     subtitle: {
         fontSize: 18,
-        marginBottom: 5,
+        marginBottom: 10,
+        fontFamily: 'Helvetica-Bold',
+        color: '#333333',
     },
     text: {
         fontSize: 12,
         marginBottom: 5,
+        fontFamily: 'Times-Roman',
+    },
+    bold: {
+        fontFamily: 'Times-Bold',
+    },
+    referenceItem: {
+        marginBottom: 15,
     },
 });
+
+const formatLink = (title: string, href: string) => {
+    if (title === 'Phone') {
+        // Remove 'tel:' and '+1', then format
+        const digits = href.replace('tel:', '').replace('+1', '');
+        return `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6)}`;
+    } else if (title === 'Email') {
+        return href.replace('mailto:', '');
+    }
+    return href;
+};
 
 const ResumePDF = () => (
     <Document>
@@ -43,8 +66,8 @@ const ResumePDF = () => (
             <View style={styles.section}>
                 <Text style={styles.subtitle}>Work Experience</Text>
                 {DATA.work.map((job) => (
-                    <View key={job.company}>
-                        <Text style={styles.text}>{job.company} - {job.title}</Text>
+                    <View key={job.company} style={{ marginBottom: 10 }}>
+                        <Text style={[styles.text, styles.bold]}>{job.company} - {job.title}</Text>
                         <Text style={styles.text}>{job.start} - {job.end || 'Present'}</Text>
                         <Text style={styles.text}>{job.description}</Text>
                     </View>
@@ -53,15 +76,32 @@ const ResumePDF = () => (
             <View style={styles.section}>
                 <Text style={styles.subtitle}>Education</Text>
                 {DATA.education.map((edu) => (
-                    <View key={edu.school}>
-                        <Text style={styles.text}>{edu.school} - {edu.degree}</Text>
+                    <View key={edu.school} style={{ marginBottom: 10 }}>
+                        <Text style={[styles.text, styles.bold]}>{edu.school} - {edu.degree}</Text>
                         <Text style={styles.text}>{edu.start} - {edu.end}</Text>
                     </View>
                 ))}
             </View>
             <View style={styles.section}>
                 <Text style={styles.subtitle}>Skills</Text>
-                <Text style={styles.text}>{DATA.skills.join(', ')}</Text>
+                <Text style={styles.text}>
+                    {Object.values(DATA.skills).flat().join(', ')}
+                </Text>
+            </View>
+            <View style={styles.section}>
+                <Text style={styles.subtitle}>References</Text>
+                {DATA.references.map((ref) => (
+                    <View key={ref.name} style={styles.referenceItem}>
+                        <Text style={[styles.text, styles.bold]}>{ref.name} - {ref.title}</Text>
+                        <Text style={styles.text}>{ref.company}</Text>
+                        <Text style={styles.text}>{ref.description}</Text>
+                        {ref.links.map((link) => (
+                            <Text key={link.title} style={styles.text}>
+                                <Text style={styles.bold}>{link.title}:</Text> {formatLink(link.title, link.href)}
+                            </Text>
+                        ))}
+                    </View>
+                ))}
             </View>
         </Page>
     </Document>

@@ -1,4 +1,3 @@
-import { HackathonCard } from "@/components/hackathon-card";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { ProjectCard } from "@/components/project-card";
@@ -8,6 +7,8 @@ import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
+import { ReferenceCard } from "@/components/reference-card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -102,13 +103,27 @@ export default function Page() {
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
             <h2 className="text-xl font-bold">Skills</h2>
           </BlurFade>
-          <div className="flex flex-wrap gap-1">
-            {DATA.skills.map((skill, id) => (
-              <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
-                <Badge key={skill}>{skill}</Badge>
-              </BlurFade>
-            ))}
-          </div>
+          <BlurFade delay={BLUR_FADE_DELAY * 10}>
+            <Tabs defaultValue="technical" className="w-full">
+              <TabsList className="flex justify-around mb-4 overflow-x-auto overflow-y-hidden py-6 px-2 scrollbar-hide">
+                <TabsTrigger value="technical">Technical</TabsTrigger>
+                <TabsTrigger value="salesAndMarketing">Sales & Marketing</TabsTrigger>
+                <TabsTrigger value="leadership">Leadership</TabsTrigger>
+                <TabsTrigger value="misc">Misc</TabsTrigger>
+              </TabsList>
+              {Object.entries(DATA.skills).map(([category, skills]) => (
+                <TabsContent key={category} value={category}>
+                  <div className="flex flex-wrap gap-2">
+                    {skills.map((skill, id) => (
+                      <BlurFade key={skill} delay={BLUR_FADE_DELAY * 11 + id * 0.05}>
+                        <Badge key={skill} className="text-sm py-1 px-2">{skill}</Badge>
+                      </BlurFade>
+                    ))}
+                  </div>
+                </TabsContent>
+              ))}
+            </Tabs>
+          </BlurFade>
         </div>
       </section>
       <section id="projects">
@@ -152,42 +167,37 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section id="hackathons">
+      <section id="references">
         <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 13}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                  Hackathons
+                  References
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  I like building things
+                  What others say about me
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  During my time in university, I attended{" "}
-                  {DATA.hackathons.length}+ hackathons. People from around the
-                  country would come together and build incredible things in 2-3
-                  days. It was eye-opening to see the endless possibilities
-                  brought to life by a group of motivated and passionate
-                  individuals.
+                  I&apos;ve had the pleasure of working with some amazing people throughout my career. Here&apos;s what a few of them have to say about our experiences together.
                 </p>
               </div>
             </div>
           </BlurFade>
           <BlurFade delay={BLUR_FADE_DELAY * 14}>
             <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
-              {DATA.hackathons.map((project, id) => (
+              {DATA.references.map((reference, id) => (
                 <BlurFade
-                  key={project.title + project.dates}
+                  key={reference.name}
                   delay={BLUR_FADE_DELAY * 15 + id * 0.05}
                 >
-                  <HackathonCard
-                    title={project.title}
-                    description={project.description}
-                    location={project.location}
-                    dates={project.dates}
-                    image={project.image}
-                    links={project.links}
+                  <ReferenceCard
+                    name={reference.name}
+                    title={reference.title}
+                    company={reference.company}
+                    description={reference.description}
+                    image={reference.image}
+                    links={reference.links}
                   />
                 </BlurFade>
               ))}
@@ -206,15 +216,15 @@ export default function Page() {
                 Get in Touch
               </h2>
               <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Want to chat? Just shoot me a dm{" "}
+                Want to chat? Just email me{" "}
                 <Link
-                  href={DATA.contact.social.X.url}
+                  href="mailto:ben@benvalentin.me"
                   className="text-blue-500 hover:underline"
                 >
-                  with a direct question on twitter
+                  here
                 </Link>{" "}
-                and I&apos;ll respond whenever I can. I will ignore all
-                soliciting.
+                and I&apos;ll respond quickly.<br />
+                (I&apos;ll ignore all soliciting.)
               </p>
             </div>
           </BlurFade>
