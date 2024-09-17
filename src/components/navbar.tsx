@@ -14,7 +14,7 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { DownloadIcon } from "lucide-react";
 import { useState } from 'react';
-import { format } from 'date-fns'; // Add this import at the top of the file
+import { format } from 'date-fns'; // Add this import at the top of the fil
 
 const handleDownloadResume = async () => {
   try {
