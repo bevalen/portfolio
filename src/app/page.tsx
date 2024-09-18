@@ -9,6 +9,8 @@ import Link from "next/link";
 import Markdown from "react-markdown";
 import { ReferenceCard } from "@/components/reference-card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { PersonalityCard, PersonalityType } from "@/components/personality-card";
+import { FunFactCard } from "@/components/fun-facts-card";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -104,12 +106,13 @@ export default function Page() {
             <h2 className="text-xl font-bold">Skills</h2>
           </BlurFade>
           <BlurFade delay={BLUR_FADE_DELAY * 10}>
-            <Tabs defaultValue="technical" className="w-full">
-              <TabsList className="flex justify-around mb-4 overflow-x-auto overflow-y-hidden py-6 px-2 scrollbar-hide">
-                <TabsTrigger value="technical">Technical</TabsTrigger>
-                <TabsTrigger value="salesAndMarketing">Sales & Marketing</TabsTrigger>
-                <TabsTrigger value="leadership">Leadership</TabsTrigger>
-                <TabsTrigger value="misc">Misc</TabsTrigger>
+            <Tabs defaultValue="Technical" className="w-full">
+              <TabsList className="flex justify-around mb-4 overflow-x-auto overflow-y-hidden scrollbar-hide">
+                {Object.keys(DATA.skills).map((category) => (
+                  <TabsTrigger key={category} value={category}>
+                    {category.charAt(0).toUpperCase() + category.slice(1).replace(/([A-Z])/g, ' $1')}
+                  </TabsTrigger>
+                ))}
               </TabsList>
               {Object.entries(DATA.skills).map(([category, skills]) => (
                 <TabsContent key={category} value={category}>
@@ -126,9 +129,37 @@ export default function Page() {
           </BlurFade>
         </div>
       </section>
+      <section id="personality">
+        <div className="flex min-h-0 flex-col gap-y-3">
+          <BlurFade delay={BLUR_FADE_DELAY * 12}>
+            <h2 className="text-xl font-bold">Personality</h2>
+          </BlurFade>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {Object.entries(DATA.personality).map(([name, personality]) => (
+              <BlurFade key={name} delay={BLUR_FADE_DELAY * 13 + Object.keys(DATA.personality).indexOf(name) * 0.05}>
+                <PersonalityCard name={name} personality={personality as PersonalityType} />
+              </BlurFade>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section id="fun-facts">
+        <div className="flex min-h-0 flex-col gap-y-3">
+          <BlurFade delay={BLUR_FADE_DELAY * 14}>
+            <h2 className="text-xl font-bold">Fun Facts</h2>
+          </BlurFade>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {DATA.funFacts.map((fact, index) => (
+              <BlurFade key={fact} delay={BLUR_FADE_DELAY * 15 + index * 0.05}>
+                <FunFactCard fact={fact} delay={BLUR_FADE_DELAY * 15 + index * 0.05} />
+              </BlurFade>
+            ))}
+          </div>
+        </div>
+      </section>
       <section id="projects">
         <div className="space-y-12 w-full py-12">
-          <BlurFade delay={BLUR_FADE_DELAY * 11}>
+          <BlurFade delay={BLUR_FADE_DELAY * 14}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
@@ -149,7 +180,7 @@ export default function Page() {
             {DATA.projects.map((project, id) => (
               <BlurFade
                 key={project.title}
-                delay={BLUR_FADE_DELAY * 12 + id * 0.05}
+                delay={BLUR_FADE_DELAY * 15 + id * 0.05}
               >
                 <ProjectCard
                   href={project.href}
@@ -169,7 +200,7 @@ export default function Page() {
       </section>
       <section id="references">
         <div className="space-y-12 w-full py-12">
-          <BlurFade delay={BLUR_FADE_DELAY * 13}>
+          <BlurFade delay={BLUR_FADE_DELAY * 16}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
@@ -184,12 +215,12 @@ export default function Page() {
               </div>
             </div>
           </BlurFade>
-          <BlurFade delay={BLUR_FADE_DELAY * 14}>
+          <BlurFade delay={BLUR_FADE_DELAY * 17}>
             <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
               {DATA.references.map((reference, id) => (
                 <BlurFade
                   key={reference.name}
-                  delay={BLUR_FADE_DELAY * 15 + id * 0.05}
+                  delay={BLUR_FADE_DELAY * 18 + id * 0.05}
                 >
                   <ReferenceCard
                     name={reference.name}
@@ -207,7 +238,7 @@ export default function Page() {
       </section>
       <section id="contact">
         <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
-          <BlurFade delay={BLUR_FADE_DELAY * 16}>
+          <BlurFade delay={BLUR_FADE_DELAY * 19}>
             <div className="space-y-3">
               <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
                 Contact

@@ -103,6 +103,16 @@ const ResumePDF = () => (
                     </View>
                 ))}
             </View>
+            <View style={styles.section}>
+                <Text style={styles.subtitle}>Personality Profile</Text>
+                {Object.entries(DATA.personality).map(([key, value]) => (
+                    <View key={key} style={{ marginBottom: 10 }}>
+                        <Text style={[styles.text, styles.bold]}>{value.type} - {value.title}</Text>
+                        <Text style={styles.text}>{value.description}</Text>
+                        <Text style={styles.text}>Attributes: {value.attributes.join(', ')}</Text>
+                    </View>
+                ))}
+            </View>
         </Page>
     </Document>
 );

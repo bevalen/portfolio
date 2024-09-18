@@ -14,7 +14,7 @@ export const DATA = {
     "Experienced entrepreneur and strategic thinker with a background in software engineering, sales, and marketing. As a former United States Marine, I am committed to achieving results and consistently hitting goals. I have founded and led multiple startups, including ValCinema, WedLaunch, and FilmFlow, where I built innovative products and grew revenues past $1M annually. My technical skills include Typescript, React/Next.js, and Python, among others. I thrive in fast-paced environments and excel in product management, agile development, team leadership, and operational management.",
   avatarUrl: "/me.png",
   skills: {
-    technical: [
+    Technical: [
       "HTML",
       "CSS",
       "JavaScript",
@@ -29,15 +29,17 @@ export const DATA = {
       "Supabase",
       "No-code Prototyping",
     ],
-    salesAndMarketing: [
+    Sales: [
       "Sales Strategy",
       "Customer Relationship Management",
       "Sales Forecasting",
       "Lead Generation",
       "Negotiation Skills",
       "Cold Calling",
-      "CRM Management",
-      "Automated Sales Workflows",
+      "Sales Optimization",
+      "Lead Qualification",
+    ],
+    Marketing: [
       "Marketing Automation",
       "Appointment Scheduling",
       "Digital Marketing",
@@ -51,38 +53,84 @@ export const DATA = {
       "Google Ads",
       "Landing Page Design",
     ],
-    leadership: [
+    Management: [
       "Team Management",
       "Talent Acquisition",
       "Operational Management",
       "Strategic Thinking",
       "Goal Setting",
-    ],
-    misc: [
       "Entrepreneurship",
       "Startup Leadership",
-      "Sales Optimization",
-      "Lead Qualification",
-      "Fundraising",
       "Business Strategy",
       "Problem-solving",
       "Adaptability",
-      "Communication",
-      "Tactfulness",
-      "Professionalism",
       "Product Management",
       "Coding Project Management",
       "Version Control",
       "Agile Development",
       "Responsive Web Design",
       "SOP Development",
-      "Wedding Industry",
-      "Film Industry",
-      "Medical Tech",
-      "Software Development",
-      "AI Technology",
+    ],
+    Communication: [
+      "Effective Listening",
+      "Empathy",
+      "Conflict Resolution",
+      "Public Speaking",
+      "Presentation Skills",
+    ],
+    Tools: [
+      "Make (Integromat)",
+      "Zapier",
+      "Jira",
+      "ClickUp",
+      "Slack",
+      "GitHub",
+      "Netlify",
+      "Vercel",
+      "GoHighLevel",
+      "Softr",
+      "Webflow",
+      "Medical EHR Systems",
+    ],
+    Misc: [
+      "Typing: 108 WPM",
+      "Ultra-Marathon Running",
+      "Combat Medical Training",
+      "Infantry Experience",
+      "Professional Piano",
     ],
   },
+  personality: {
+    myers_briggs: {
+      type: "ENTJ-A",
+      title: "The Visionary",
+      url: "https://www.crystalknows.com/personality-type/entj",
+      description: "Strategic leaders with a drive for innovation and achievement.",
+      attributes: ["Strategic", "Confident", "Efficient", "Charismatic", "Decisive"]
+    },
+    enneagram: {
+      type: "8 Wing 7",
+      title: "The Maverick",
+      url: "https://www.crystalknows.com/enneagram/type-8",
+      description: "Confident and assertive individuals who seek challenges and protect others.",
+      attributes: ["Assertive", "Protective", "Energetic", "Adventurous", "Self-confident"]
+    },
+    disc_assessment: {
+      type: "High D, Low I",
+      title: "The Driver",
+      url: "https://www.crystalknows.com/disc/di-personality-type",
+      description: "Results-oriented problem-solvers who thrive on challenges and direct action.",
+      attributes: ["Direct", "Results-oriented", "Decisive", "Competitive", "Independent"]
+    }
+  },
+  funFacts: [
+    "I completed a 100k ultramarathon and a 140-mile Ironman triathlon.",
+    "I joined the military at the age of 26.",
+    "I am one of seven siblings, with three brothers and three sisters.",
+    "I grew up on a farm in Tennessee.",
+    "I am the designated sourdough baker in my family.",
+    "I initially studied music before transitioning to business."
+  ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
   ],
@@ -236,7 +284,7 @@ export const DATA = {
         "Python",
         "PostgreSQL",
         "Supabase",
-        "TailwindCSS",
+        "Tailwind",
         "Stripe",
         "OpenAI",
         "Shadcn UI",
@@ -262,6 +310,7 @@ export const DATA = {
         "Designed and deployed a custom-code marketing website that allows the administration team to update data dynamically using Airtable.",
       technologies: [
         "Next.js",
+        "Tailwind",
         "Typescript",
         "Airtable",
         "ClickUp",
@@ -286,11 +335,11 @@ export const DATA = {
       dates: "August 2024",
       active: true,
       description:
-        "Quivr is a simple AI tool to help you find Bible verses based on your current circumstances.",
+        "Quivr is a simple AI tool to help you find Bible verses that speak directly to your current circumstances.",
       technologies: [
         "Next.js",
         "Typescript",
-        "TailwindCSS",
+        "Tailwind",
         "OpenAI",
       ],
       links: [
@@ -334,10 +383,17 @@ export const DATA = {
   references: [
     {
       name: "Wayne Craig",
-      title: "VP & GM Sales and Operations US",
-      company: "TRI Dental Implants AG",
+      title: "Executive Vice President Global Sales and Marketing",
+      company: "CAIRE Inc.",
       description:
-        "Ben's strategic thinking and ability to execute complex projects are truly impressive. His leadership skills and dedication to achieving results make him an invaluable asset to any organization.",
+        `I have had the pleasure of working with Ben Valentin on several projects, 
+        and his ability to blend creativity with a process-oriented approach is exceptional. 
+        Ben consistently delivers innovative solutions that enhance productivity, 
+        while navigating complex challenges with ease. He is a skilled problem-solver, 
+        able to streamline operations through his deep technical expertise and strategic mindset. 
+        Ben is also an excellent communicator, making complex concepts accessible 
+        and ensuring successful project outcomes. I highly recommend him to any organization 
+        seeking to optimize through automation.`,
       image: "/wayne-craig.jpg",
       links: [
         {
@@ -346,14 +402,9 @@ export const DATA = {
           href: "https://www.linkedin.com/in/waynecraig/",
         },
         {
-          icon: <Icons.phone className="size-3" />,
-          title: "Phone",
-          href: "tel:+15137032066",
-        },
-        {
           icon: <Icons.email className="size-3" />,
           title: "Email",
-          href: "mailto:wayne.craig2550@gmail.com",
+          href: "mailto:wcraigees@gmail.com",
         },
       ],
     },
@@ -362,7 +413,7 @@ export const DATA = {
       title: "Founder & CEO",
       company: "Band of Coders",
       description:
-        "Ben's technical expertise combined with his business acumen is rare to find. His innovative approach to problem-solving and ability to lead teams effectively sets him apart in the tech industry.",
+        "",
       image: "/bobby-john.jpg",
       links: [
         {
@@ -387,7 +438,7 @@ export const DATA = {
       title: "Founder & CEO",
       company: "MapleCross Wealth Management",
       description:
-        "I've been consistently impressed by Ben's entrepreneurial spirit and his ability to turn ideas into successful ventures. His strategic insights and adaptability make him an exceptional professional.",
+        "",
       image: "",
       links: [
         {
@@ -407,7 +458,7 @@ export const DATA = {
       title: "Founder & CEO",
       company: "Blu Couture",
       description:
-        "Ben's creativity and attention to detail are unmatched. His ability to understand client needs and deliver high-quality results has been crucial to the success of our collaborations.",
+        "",
       image: "",
       links: [
         {
