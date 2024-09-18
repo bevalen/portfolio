@@ -262,12 +262,12 @@ export const DATA = {
   ],
   education: [
     {
-      school: "Florida School of Discipleship",
-      href: "https://floridadiscipleship.com",
-      degree: "Bachelor's Degree of Computer Science (BCS)",
+      school: "Florida School of Discipleship (Masters Commission)",
+      href: "https://mastersusa.com/",
+      degree: "Studied Music & Ministry",
       logoUrl: "",
-      start: "2016",
-      end: "2021",
+      start: "2011",
+      end: "2015",
     }
   ],
   projects: [

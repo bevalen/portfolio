@@ -1,0 +1,1 @@
+Next project: Create an AI chatbot that is pre-trained on my life story so users can ask questions and get to know me better. It showcases my ability to build and train an AI chat interface, while also giving them another way to get to know me better.
