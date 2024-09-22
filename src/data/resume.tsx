@@ -209,7 +209,7 @@ export const DATA = {
       start: "2021",
       end: "2021",
       description:
-        "Family business operating 35+ rental properties. Managed operations for 35+ properties and 100+ tenants.",
+        "Led the implementation of innovative property acquisition systems at a national multi-family real estate investment firm, resulting in the potential generation of over $100M in new property value.",
     },
     {
       company: "Band of Coders",
@@ -221,7 +221,7 @@ export const DATA = {
       start: "2019",
       end: "2020",
       description:
-        "Global software development firm. Spearheaded sales procedure optimization and managed 200+ contractors nationally.",
+        "Led optimization of sales processes and developed a comprehensive growth marketing strategy for a global software development firm.",
     },
     {
       company: "United States Marine Corps",
@@ -245,7 +245,7 @@ export const DATA = {
       start: "2017",
       end: "2021",
       description:
-        "National wedding photo + video company. Increased monthly revenue by 300% year over year and managed operations for 99+ weddings/month nationally.",
+        "National wedding photo + video company. Increased monthly revenue by 300% year over year and managed operations for 99+ weddings/month nationally. Sold company after reaching $1M annual revenue.",
     },
     {
       company: "Coast to Coast Linens",
