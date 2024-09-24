@@ -207,7 +207,7 @@ export default function Page() {
                   References
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  What others say about me
+                  Don&apos;t take my word for it
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   I&apos;ve had the pleasure of working with some amazing people throughout my career. Here&apos;s what a few of them have to say about our experiences together.
