@@ -233,7 +233,7 @@ export const DATA = {
       start: "2019",
       end: "2023",
       description:
-        "Infantry. Served 5 years with extensive training and experience in various operational environments.",
+        "Infantry. Served 5 years with extensive training and experience in various operational environments. Received a meritorious promotion at The School of Infantry and served as a team leader, demonstrating leadership and operational excellence. Completed combat medical training, equipping me with critical skills in emergency response and battlefield medicine.",
     },
     {
       company: "ValCinema",
@@ -245,7 +245,7 @@ export const DATA = {
       start: "2017",
       end: "2021",
       description:
-        "National wedding photo + video company. Increased monthly revenue by 300% year over year and managed operations for 99+ weddings/month nationally. Sold company after reaching $1M annual revenue.",
+        "Founded a national wedding photo + video company, growing monthly revenue by 300% year over year and managed operations for 50+ weddings/month nationally. Sold company after reaching $1M annual revenue.",
     },
     {
       company: "Coast to Coast Linens",
@@ -257,7 +257,7 @@ export const DATA = {
       start: "2015",
       end: "2017",
       description:
-        "Coast to Coast Linens is a national commercial linens company. During my time there I managed a team of 100+ employees and was responsible for all daily operations.",
+        "Coast to Coast Linens is a national commercial linens company. During my time there, I managed a team of 100+ employees on a daily basis, responsible for all daily operations. I ensured efficiency by training team members on best practices and workflows, fostering a culture of accountability to guarantee that tasks were completed effectively each day.",
     },
   ],
   education: [
