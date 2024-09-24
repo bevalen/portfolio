@@ -107,7 +107,7 @@ export default function Page() {
           </BlurFade>
           <BlurFade delay={BLUR_FADE_DELAY * 10}>
             <Tabs defaultValue="Technical" className="w-full">
-              <TabsList className="flex justify-around mb-4 overflow-x-auto overflow-y-hidden scrollbar-hide">
+              <TabsList className="flex justify-between mb-4 overflow-x-auto overflow-y-hidden scrollbar-hide">
                 {Object.keys(DATA.skills).map((category) => (
                   <TabsTrigger key={category} value={category}>
                     {category.charAt(0).toUpperCase() + category.slice(1).replace(/([A-Z])/g, ' $1')}

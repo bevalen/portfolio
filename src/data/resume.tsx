@@ -55,7 +55,6 @@ export const DATA = {
     ],
     Management: [
       "Team Management",
-      "Talent Acquisition",
       "Operational Management",
       "Strategic Thinking",
       "Goal Setting",
@@ -66,17 +65,8 @@ export const DATA = {
       "Adaptability",
       "Product Management",
       "Coding Project Management",
-      "Version Control",
-      "Agile Development",
       "Responsive Web Design",
       "SOP Development",
-    ],
-    Communication: [
-      "Effective Listening",
-      "Empathy",
-      "Conflict Resolution",
-      "Public Speaking",
-      "Presentation Skills",
     ],
     Tools: [
       "Make (Integromat)",
