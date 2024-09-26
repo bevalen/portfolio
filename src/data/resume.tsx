@@ -389,6 +389,11 @@ export const DATA = {
           href: "https://testimonies.benvalentin.me/",
           icon: <Icons.globe className="size-3" />,
         },
+        {
+          type: "Source",
+          href: "https://github.com/bevalen/7-Minute-Stories",
+          icon: <Icons.github className="size-3" />,
+        },
       ],
       image: "/testimonies.jpg",
       video: "",
