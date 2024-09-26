@@ -369,6 +369,30 @@ export const DATA = {
       image: "/lifetrack.jpg",
       video: "",
     },
+    {
+      title: "7-Minute Stories",
+      href: "https://testimonies.benvalentin.me/",
+      dates: "August 2024",
+      active: false,
+      description:
+        "7-Minute Stories is an AI app that allows users to generate 7-minute versions of their testimony by answering a few questions.",
+      technologies: [
+        "Next JS",
+        "OpenAI",
+        "Tailwind",
+        "Shadcn UI",
+        "Vercel",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://testimonies.benvalentin.me/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/testimonies.jpg",
+      video: "",
+    },
   ],
   references: [
     {
