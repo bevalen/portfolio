@@ -12,7 +12,7 @@ import {
 import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { DownloadIcon } from "lucide-react";
+import { DownloadIcon, ShareIcon } from "lucide-react";
 import { useState } from 'react';
 import { format } from 'date-fns'; // Add this import at the top of the fil
 
@@ -62,6 +62,25 @@ export default function Navbar() {
       // Handle error (e.g., show a notification to the user)
     } finally {
       setIsGenerating(false);
+    }
+  };
+
+  const handleShare = async () => {
+    const shareData = {
+      title: "Ben Valentin's Resume",
+      text: "Check out Ben Valentin's resume, projects, and more!",
+      url: 'https://resume.benvalentin.me/'
+    };
+
+    if (navigator.share) {
+      try {
+        await navigator.share(shareData);
+      } catch (err) {
+        console.error('Error sharing:', err);
+      }
+    } else {
+      // Fallback for browsers that don't support Web Share API
+      alert('Web Share not supported on this browser. You can copy the URL: ' + shareData.url);
     }
   };
 
@@ -129,6 +148,25 @@ export default function Navbar() {
             </TooltipTrigger>
             <TooltipContent>
               <p>{isGenerating ? "Generating..." : "Download Resume"}</p>
+            </TooltipContent>
+          </Tooltip>
+        </DockIcon>
+        <DockIcon>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <button
+                onClick={handleShare}
+                aria-label="Share"
+                className={cn(
+                  buttonVariants({ variant: "ghost", size: "icon" }),
+                  "size-12"
+                )}
+              >
+                <ShareIcon className="size-4" />
+              </button>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Share</p>
             </TooltipContent>
           </Tooltip>
         </DockIcon>
