@@ -179,7 +179,7 @@ export const DATA = {
     },
     {
       company: "GetDoctor",
-      href: "https://getdoctor.com",
+      href: "https://getdoctor.co",
       badges: [],
       location: "Dunwoody, GA",
       title: "Head of Growth",
