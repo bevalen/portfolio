@@ -84,9 +84,14 @@ const ResumePDF = () => (
             </View>
             <View style={styles.section}>
                 <Text style={styles.subtitle}>Skills</Text>
-                <Text style={styles.text}>
-                    {Object.values(DATA.skills).flat().join(', ')}
-                </Text>
+                {Object.entries(DATA.skills).map(([category, skillList]) => (
+                    <View key={category} style={{ marginBottom: 10 }}>
+                        <Text style={[styles.text, styles.bold]}>{category}:</Text>
+                        <Text style={styles.text}>
+                            {skillList.join(', ')}
+                        </Text>
+                    </View>
+                ))}
             </View>
             <View style={styles.section}>
                 <Text style={styles.subtitle}>References</Text>
