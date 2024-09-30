@@ -166,6 +166,18 @@ export const DATA = {
         "Wedding vendor marketing agency. Built the first instant-booking wedding vendor marketplace MVP using Next JS, Python, Tailwind CSS, Supabase, Stripe, OpenAI.",
     },
     {
+      company: "Valentin Solutions",
+      href: "https://benvalentin.me/",
+      badges: [],
+      location: "Cumming, GA",
+      title: "Founder & CEO",
+      logoUrl: "/vgc.png",
+      start: "2021",
+      end: "Present",
+      description:
+        "Consulting company that helps business owners save time by automating their repetitive tasks.",
+    },
+    {
       company: "GetDoctor",
       href: "https://getdoctor.com",
       badges: [],
