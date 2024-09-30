@@ -270,6 +270,8 @@ export const DATA = {
       logoUrl: "",
       start: "2011",
       end: "2015",
+      description:
+        "Masters Commission is hands on discipleship training school. I studied music and traveled nationally with a worship band.",
     }
   ],
   projects: [
