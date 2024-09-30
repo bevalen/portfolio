@@ -88,7 +88,7 @@ const ResumePDF = () => (
                     <View key={category} style={{ marginBottom: 10 }}>
                         <Text style={[styles.text, styles.bold]}>{category}:</Text>
                         <Text style={styles.text}>
-                            {skillList.join(', ')}
+                            {skillList.map(skill => skill.name).join(', ')}
                         </Text>
                     </View>
                 ))}
