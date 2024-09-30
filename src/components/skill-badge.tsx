@@ -13,11 +13,11 @@ interface SkillBadgeProps {
 export function SkillBadge({ name, description }: SkillBadgeProps) {
     return (
         <TooltipProvider>
-            <Tooltip delayDuration={0}>
+            <Tooltip delayDuration={150}>
                 <TooltipTrigger>
-                    <Badge className="flex items-center gap-1">
+                    <Badge className="flex items-center gap-1 py-1 hover:bg-black dark:hover:bg-white">
                         {name}
-                        <ChevronRight size={14} />
+                        <ChevronRight size={14} className='hidden md:block' />
                     </Badge>
                 </TooltipTrigger>
                 <TooltipContent className="bg-white text-black shadow-md shadow-black/20 dark:shadow-white/20 dark:shadow-md">
