@@ -11,6 +11,8 @@ import { ReferenceCard } from "@/components/reference-card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { PersonalityCard, PersonalityType } from "@/components/personality-card";
 import { FunFactCard } from "@/components/fun-facts-card";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { SkillBadge } from "@/components/SkillBadge";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -119,8 +121,8 @@ export default function Page() {
                 <TabsContent key={category} value={category}>
                   <div className="flex flex-wrap gap-2">
                     {skills.map((skill, id) => (
-                      <BlurFade key={skill} delay={BLUR_FADE_DELAY * 11 + id * 0.05}>
-                        <Badge key={skill} className="text-sm py-1 px-2 hover:bg-black">{skill}</Badge>
+                      <BlurFade key={skill.name} delay={BLUR_FADE_DELAY * 11 + id * 0.05}>
+                        <SkillBadge name={skill.name} description={skill.description} />
                       </BlurFade>
                     ))}
                   </div>
