@@ -20,7 +20,7 @@ export function SkillBadge({ name, description }: SkillBadgeProps) {
                         <ChevronRight size={14} />
                     </Badge>
                 </TooltipTrigger>
-                <TooltipContent className="bg-white text-black shadow-md">
+                <TooltipContent className="bg-white text-black shadow-md shadow-black/20 dark:shadow-white/20 dark:shadow-md">
                     <p>{description}</p>
                 </TooltipContent>
             </Tooltip>

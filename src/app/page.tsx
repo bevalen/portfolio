@@ -12,7 +12,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { PersonalityCard, PersonalityType } from "@/components/personality-card";
 import { FunFactCard } from "@/components/fun-facts-card";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-import { SkillBadge } from "@/components/SkillBadge";
+import { SkillBadge } from "@/components/skill-badge";
 
 const BLUR_FADE_DELAY = 0.04;
 
