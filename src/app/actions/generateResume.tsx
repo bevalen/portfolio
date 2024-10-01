@@ -47,14 +47,20 @@ const styles = StyleSheet.create({
     },
     experienceItem: {
         marginBottom: 15,
+        borderBottom: '1pt solid #CCCCCC',
+        paddingBottom: 10,
+    },
+    jobHeader: {
+        marginBottom: 5,
     },
     jobTitle: {
-        fontSize: 12,
+        fontSize: 14,
         fontWeight: 'bold',
     },
     jobDetails: {
         fontSize: 10,
         color: '#666',
+        fontStyle: 'italic',
     },
     jobDescription: {
         fontSize: 10,
@@ -205,8 +211,10 @@ const ResumePDF = () => (
                         <Text style={styles.sectionTitle}>Experience</Text>
                         {DATA.work.map((job) => (
                             <View key={job.company} style={styles.experienceItem}>
-                                <Text style={styles.jobTitle}>{job.title}</Text>
-                                <Text style={styles.jobDetails}>{job.company} | {job.location} | {job.start} - {job.end}</Text>
+                                <View style={styles.jobHeader}>
+                                    <Text style={styles.jobTitle}>{job.title}</Text>
+                                    <Text style={styles.jobDetails}>{job.company} | {job.location} | {job.start} - {job.end}</Text>
+                                </View>
                                 <Text style={styles.jobDescription}>{job.description}</Text>
                                 {job.accomplishments && (
                                     <View style={{ marginTop: 5 }}>
