@@ -18,6 +18,7 @@ interface ResumeCardProps {
   badges?: readonly string[];
   period: string;
   description?: string;
+  accomplishments?: string[];
 }
 export const ResumeCard = ({
   logoUrl,
@@ -28,11 +29,12 @@ export const ResumeCard = ({
   badges,
   period,
   description,
+  accomplishments,
 }: ResumeCardProps) => {
   const [isExpanded, setIsExpanded] = React.useState(false);
 
   const handleClick = () => {
-    if (description || href) {
+    if (description || href || accomplishments?.length) {
       setIsExpanded(!isExpanded);
     }
   };
@@ -121,6 +123,26 @@ export const ResumeCard = ({
               className="mt-2 text-xs sm:text-sm"
             >
               {description}
+            </motion.div>
+          )}
+          {isExpanded && accomplishments && accomplishments.length > 0 && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{
+                opacity: isExpanded ? 1 : 0,
+                height: isExpanded ? "auto" : 0,
+              }}
+              transition={{
+                duration: 0.7,
+                ease: [0.16, 1, 0.3, 1],
+              }}
+              className="mt-2 text-xs sm:text-sm"
+            >
+              <ul className="list-disc list-inside">
+                {accomplishments.map((accomplishment, index) => (
+                  <li key={index}>{accomplishment}</li>
+                ))}
+              </ul>
             </motion.div>
           )}
         </div>

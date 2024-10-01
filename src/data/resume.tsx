@@ -6,12 +6,13 @@ export const DATA = {
   name: "Ben Valentin",
   initials: "BV",
   url: "https://benvalentin.me",
+  resumeUrl: "https://resume.benvalentin.me",
   location: "Cumming, GA",
-  locationLink: "https://www.google.com/maps/place/sanfrancisco",
+  locationLink: "https://www.google.com/maps/place/cumming",
   description:
     "US Marine turned tech entrepreneur. Passionate about building things and solving problems. Strategic thinker with a track record of consistently hitting ambitious goals.",
   summary:
-    "Experienced entrepreneur and strategic thinker with a background in software engineering, sales, and marketing. As a former United States Marine, I am committed to achieving results and consistently hitting goals. I have founded and led multiple startups, including ValCinema, WedLaunch, and FilmFlow, where I built innovative products and grew revenues past $1M annually. My technical skills include Typescript, React/Next.js, and Python, among others. I thrive in fast-paced environments and excel in product management, agile development, team leadership, and operational management.",
+    "Experienced entrepreneur and strategic thinker with a background in software engineering, sales, and marketing. As a United States Marine, I am committed to achieving results and consistently hitting goals. I have founded and led multiple startups, including ValCinema, WedLaunch, and FilmFlow, where I built innovative products and grew revenues past $1M annually. My technical skills include Typescript, React/Next.js, and Python, among others. I thrive in fast-paced environments and excel in product management, agile development, team leadership, and operational management.",
   avatarUrl: "/me.png",
   skills: {
     Technical: [
@@ -127,6 +128,7 @@ export const DATA = {
     email: "ben@benvalentin.me",
     tel: "+16787086066",
     website: "https://benvalentin.me",
+    resumeUrl: "https://resume.benvalentin.me",
     social: {
       GitHub: {
         name: "GitHub",
@@ -163,7 +165,13 @@ export const DATA = {
       start: "2023",
       end: "Present",
       description:
-        "Wedding vendor marketing agency. Built the first instant-booking wedding vendor marketplace MVP using Next JS, Python, Tailwind CSS, Supabase, Stripe, OpenAI.",
+        "Wedding vendor marketing agency.",
+      accomplishments: [
+        "Raised $200,000 from angel investors",
+        "Built & launched the MVP product within 6 weeks using React & Tailwind",
+        "Acquired 300 pilot users",
+        "Produced the first AI-written short film"
+      ]
     },
     {
       company: "Valentin Solutions",
@@ -176,30 +184,49 @@ export const DATA = {
       end: "Present",
       description:
         "Consulting company that helps business owners save time by automating their repetitive tasks.",
+      accomplishments: [
+        "Increased the monthly revenue by 300% year over year",
+        "Developed operations to manage upwards of 99 weddings/month nationally",
+        "Built a system to manage 200+ contractors nationally",
+        "Developed procedures to manage up to 100+ weddings per month nationally",
+        "Automated all marketing, lead-qualifying, and sales appointment scheduling",
+        "Managed all copywriting for email marketing, web pages & sales material"
+      ],
     },
     {
       company: "GetDoctor",
-      href: "https://getdoctor.co",
+      href: "https://getdoctor.co/",
       badges: [],
       location: "Dunwoody, GA",
       title: "Head of Growth",
-      logoUrl: "/getdoctor.jpg",
+      logoUrl: "/getdoctor.png",
       start: "2021",
       end: "2023",
-      description:
-        "Medical tech startup improving patient intake experience. Automated appointment booking process and developed SOPs for product requirement documentation.",
+      description: "GetDoctor is a medical tech startup focused on improving the patient intake experience.",
+      accomplishments: [
+        "Automated the appointment booking process for clients",
+        "Built no-code prototypes to test with users prior to building with code",
+        "Made key hires in expanding the growth team",
+        "Built the SOP's for product requirement documentation",
+        "Successfully migrated software team from Jira to ClickUp"
+      ]
     },
     {
       company: "FilmFlow, Inc",
-      href: "https://filmflow.com",
+      href: "https://filmflow.ai/",
       badges: [],
       location: "Cumming, GA",
       title: "Founder & CEO",
       logoUrl: "/filmflow.png",
       start: "2022",
       end: "2023",
-      description:
-        "AI tech startup enabling filmmakers to write screenplays with AI. Raised $200,000 from angel investors and produced the first AI-written short film.",
+      description: "FilmFlow is an AI tech startup that allows filmmakers to write their screenplay with AI.",
+      accomplishments: [
+        "Raised $200,000 from angel investors",
+        "Built & launched the MVP product within 6 weeks using React & Tailwind",
+        "Acquired 300 pilot users",
+        "Produced the first AI written short film"
+      ]
     },
     {
       company: "Metz-Kelly Holdings",
@@ -210,20 +237,27 @@ export const DATA = {
       logoUrl: "/metzkelly.png",
       start: "2021",
       end: "2021",
-      description:
+      description: "Metz-Kelly Holdings is a national multi-family real estate investment firm focused on innovative property acquisition systems.",
+      accomplishments: [
         "Led the implementation of innovative property acquisition systems at a national multi-family real estate investment firm, resulting in the potential generation of over $100M in new property value.",
+      ]
     },
     {
       company: "Band of Coders",
-      href: "https://bandofcoders.com",
+      href: "https://bandofcoders.com/",
       badges: [],
       location: "Dunwoody, GA",
       title: "Head of Growth",
-      logoUrl: "/bandofcoders.jpg",
+      logoUrl: "/bandofcoders.png",
       start: "2019",
       end: "2020",
-      description:
-        "Led optimization of sales processes and developed a comprehensive growth marketing strategy for a global software development firm.",
+      description: "Band of Coders is a global software development firm",
+      accomplishments: [
+        "Spearheaded the formulation and optimization of Band of Coders' sales procedures",
+        "Played a pivotal role in talent acquisition by strategically hiring key employees",
+        "Engineered and implemented streamlined operational processes",
+        "Built a system to manage 200+ contractors nationally"
+      ]
     },
     {
       company: "United States Marine Corps",
@@ -234,20 +268,33 @@ export const DATA = {
       logoUrl: "/usmc.png",
       start: "2019",
       end: "2023",
-      description:
-        "Infantry. Served 5 years with extensive training and experience in various operational environments. Received a meritorious promotion at The School of Infantry and served as a team leader, demonstrating leadership and operational excellence. Completed combat medical training, equipping me with critical skills in emergency response and battlefield medicine.",
+      description: "Served 5 years in the United States Marine Corps Infantry, gaining extensive training and experience in various operational environments.",
+      accomplishments: [
+        "Received a meritorious promotion at The School of Infantry",
+        "Served as a team leader",
+        "Completed combat medical training",
+        "Demonstrated leadership and operational excellence"
+      ]
     },
     {
       company: "ValCinema",
-      href: "https://valcinema.com",
+      href: "https://valcinema.com/",
       badges: [],
       location: "Cumming, GA",
       title: "Founder & CEO",
       logoUrl: "/valcinema.png",
       start: "2017",
       end: "2021",
-      description:
-        "Founded a national wedding photo + video company, growing monthly revenue by 300% year over year and managed operations for 50+ weddings/month nationally. Sold company after reaching $1M annual revenue.",
+      description: "ValCinema is a national wedding photo + video company.",
+      accomplishments: [
+        "Successfully sold the business four years after building from the ground up",
+        "Increased the monthly revenue by 300% year over year",
+        "Developed operations to manage upwards of 99 weddings/month nationally",
+        "Built a system to manage 200+ contractors nationally",
+        "Developed procedures to manage up to 100+ weddings per month nationally",
+        "Automated all marketing, lead-qualifying, and sales appointment scheduling",
+        "Managed all copywriting for email marketing, web pages & sales material"
+      ]
     },
     {
       company: "Coast to Coast Linens",
@@ -259,7 +306,12 @@ export const DATA = {
       start: "2015",
       end: "2017",
       description:
-        "Coast to Coast Linens is a national commercial linens company. During my time there, I managed a team of 100+ employees on a daily basis, responsible for all daily operations. I ensured efficiency by training team members on best practices and workflows, fostering a culture of accountability to guarantee that tasks were completed effectively each day.",
+        "Coast to Coast Linens is a national commercial linens company.",
+      accomplishments: [
+        "Managed a team of 100+ employees on a daily basis, responsible for all daily operations",
+        "Ensured efficiency by training team members on best practices and workflows",
+        "Fostered a culture of accountability to guarantee that tasks were completed effectively each day"
+      ]
     },
   ],
   education: [
@@ -272,6 +324,9 @@ export const DATA = {
       end: "2015",
       description:
         "Masters Commission is hands on discipleship training school. I studied music and traveled nationally with a worship band.",
+      accomplishments: [
+        "Studied music and traveled nationally with a worship band",
+      ]
     }
   ],
   projects: [
