@@ -185,12 +185,11 @@ export const DATA = {
       description:
         "Consulting company that helps business owners save time by automating their repetitive tasks.",
       accomplishments: [
-        "Increased the monthly revenue by 300% year over year",
-        "Developed operations to manage upwards of 99 weddings/month nationally",
-        "Built a system to manage 200+ contractors nationally",
-        "Developed procedures to manage up to 100+ weddings per month nationally",
-        "Automated all marketing, lead-qualifying, and sales appointment scheduling",
-        "Managed all copywriting for email marketing, web pages & sales material"
+        "Built rapid no-code MVP's for clients to test their product ideas",
+        "Increased a client's proposal submission time from 7 days to under 24 hours",
+        "Implemented full project management systems for custom furniture shops",
+        "Implemented automated sales follow-up for clients",
+        "Automated advertising campaign lead entry",
       ],
     },
     {
@@ -256,7 +255,6 @@ export const DATA = {
         "Spearheaded the formulation and optimization of Band of Coders' sales procedures",
         "Played a pivotal role in talent acquisition by strategically hiring key employees",
         "Engineered and implemented streamlined operational processes",
-        "Built a system to manage 200+ contractors nationally"
       ]
     },
     {
@@ -290,7 +288,7 @@ export const DATA = {
         "Successfully sold the business four years after building from the ground up",
         "Increased the monthly revenue by 300% year over year",
         "Developed operations to manage upwards of 99 weddings/month nationally",
-        "Built a system to manage 200+ contractors nationally",
+        "Built a system to manage 300+ contractors nationally",
         "Developed procedures to manage up to 100+ weddings per month nationally",
         "Automated all marketing, lead-qualifying, and sales appointment scheduling",
         "Managed all copywriting for email marketing, web pages & sales material"
