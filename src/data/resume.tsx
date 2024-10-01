@@ -82,7 +82,7 @@ export const DATA = {
       { name: "Medical EHR Systems", description: "Worked with various Electronic Health Record systems in healthcare settings." },
     ],
     Misc: [
-      { name: "Typing Speed", description: "108 WPM, enhancing productivity in digital tasks." },
+      { name: "108 WPM Typing Speed", description: "Enhancing productivity in digital tasks." },
       { name: "Ultra-Marathon Running", description: "Demonstrated extreme endurance and mental toughness." },
       { name: "Combat Medical Training", description: "Acquired advanced first aid and emergency response skills." },
       { name: "Infantry Experience", description: "Developed leadership, teamwork, and strategic thinking in high-pressure environments." },
@@ -126,6 +126,7 @@ export const DATA = {
   contact: {
     email: "ben@benvalentin.me",
     tel: "+16787086066",
+    website: "https://benvalentin.me",
     social: {
       GitHub: {
         name: "GitHub",

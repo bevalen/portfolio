@@ -10,111 +10,144 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         backgroundColor: '#FFFFFF',
         padding: 30,
-        fontFamily: 'Times-Roman',
+        fontFamily: 'Helvetica',
     },
-    section: {
-        margin: 10,
-        padding: 10,
+    header: {
+        marginBottom: 20,
+        alignItems: 'center', // Center the content
+        justifyContent: 'center', // Center the content
+    },
+    name: {
+        fontSize: 36,
+        fontWeight: 'bold',
+        marginBottom: 5,
     },
     title: {
-        fontSize: 24,
-        marginBottom: 10,
-        fontFamily: 'Helvetica-Bold',
-    },
-    subtitle: {
         fontSize: 18,
+        color: '#666',
         marginBottom: 10,
-        fontFamily: 'Helvetica-Bold',
-        color: '#333333',
     },
-    text: {
-        fontSize: 12,
-        marginBottom: 5,
-        fontFamily: 'Times-Roman',
+    section: {
+        marginBottom: 20,
     },
-    bold: {
-        fontFamily: 'Times-Bold',
+    sectionTitle: {
+        fontSize: 16,
+        fontWeight: 'bold',
+        marginBottom: 10,
+        textTransform: 'uppercase',
+        borderBottomWidth: 1,
+        borderBottomColor: '#000',
+        paddingBottom: 5,
     },
-    referenceItem: {
+    contactInfo: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        marginBottom: 10,
+    },
+    contactItem: {
+        fontSize: 10,
+    },
+    experienceItem: {
         marginBottom: 15,
+    },
+    jobTitle: {
+        fontSize: 12,
+        fontWeight: 'bold',
+    },
+    jobDetails: {
+        fontSize: 10,
+        color: '#666',
+    },
+    jobDescription: {
+        fontSize: 10,
+        marginTop: 5,
+    },
+    skillCategory: {
+        fontSize: 14,
+        fontWeight: 'bold',
+        marginBottom: 5,
+        color: '#333',
+        textDecoration: 'underline',
+    },
+    skillList: {
+        fontSize: 10,
+        marginBottom: 10,
+    },
+    personalityItem: {
+        marginBottom: 10,
+    },
+    personalityType: {
+        fontSize: 12,
+        fontWeight: 'bold',
+    },
+    personalityDescription: {
+        fontSize: 10,
     },
 });
 
-const formatLink = (title: string, href: string) => {
-    if (title === 'Phone') {
-        // Remove 'tel:' and '+1', then format
-        const digits = href.replace('tel:', '').replace('+1', '');
-        return `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6)}`;
-    } else if (title === 'Email') {
-        return href.replace('mailto:', '');
-    }
-    return href;
-};
+const formattedTel = `(${DATA.contact.tel.slice(2, 5)}) ${DATA.contact.tel.slice(5, 8)}-${DATA.contact.tel.slice(8)}`;
 
 const ResumePDF = () => (
     <Document>
         <Page size="A4" style={styles.page}>
-            <View style={styles.section}>
-                <Text style={styles.title}>{DATA.name}</Text>
-                <Text style={styles.text}>{DATA.location}</Text>
-                <Text style={styles.text}>{DATA.contact.email}</Text>
+            <View style={styles.header}>
+                <Text style={styles.name}>{DATA.name}</Text>
+                <Text style={styles.title}>US Marine | Technology Entrepreneur | Strategic Problem Solver</Text>
             </View>
             <View style={styles.section}>
-                <Text style={styles.subtitle}>Summary</Text>
-                <Text style={styles.text}>{DATA.summary}</Text>
+                <Text style={styles.sectionTitle}>Professional Summary</Text>
+                <Text style={styles.jobDescription}>{DATA.summary}</Text>
             </View>
             <View style={styles.section}>
-                <Text style={styles.subtitle}>Work Experience</Text>
+                <Text style={styles.sectionTitle}>Contact</Text>
+                <Text style={styles.contactItem}>{formattedTel}</Text>
+                <Text style={styles.contactItem}>{DATA.contact.email}</Text>
+                <Text style={styles.contactItem}>{DATA.location}</Text>
+                <Text style={styles.contactItem}>{DATA.contact.website}</Text>
+                <Text style={styles.contactItem}>{DATA.contact.social.LinkedIn.url}</Text>
+                <Text style={styles.contactItem}>{DATA.contact.social.GitHub.url}</Text>
+            </View>
+            <View style={styles.section}>
+                <Text style={styles.sectionTitle}>Experience</Text>
                 {DATA.work.map((job) => (
-                    <View key={job.company} style={{ marginBottom: 10 }}>
-                        <Text style={[styles.text, styles.bold]}>{job.company} - {job.title}</Text>
-                        <Text style={styles.text}>{job.start} - {job.end || 'Present'}</Text>
-                        <Text style={styles.text}>{job.description}</Text>
+                    <View key={job.company} style={styles.experienceItem}>
+                        <Text style={styles.jobTitle}>{job.title}</Text>
+                        <Text style={styles.jobDetails}>{job.company} | {job.location} | {job.start} - {job.end}</Text>
+                        <Text style={styles.jobDescription}>{job.description}</Text>
                     </View>
                 ))}
             </View>
             <View style={styles.section}>
-                <Text style={styles.subtitle}>Education</Text>
-                {DATA.education.map((edu) => (
-                    <View key={edu.school} style={{ marginBottom: 10 }}>
-                        <Text style={[styles.text, styles.bold]}>{edu.school} - {edu.degree}</Text>
-                        <Text style={styles.text}>{edu.start} - {edu.end}</Text>
+                <Text style={styles.sectionTitle}>Personality</Text>
+                {Object.entries(DATA.personality).map(([key, value]) => (
+                    <View key={key} style={styles.personalityItem}>
+                        <Text style={styles.personalityType}>{value.type} - {value.title}</Text>
+                        <Text style={styles.personalityDescription}>{value.description}</Text>
                     </View>
                 ))}
             </View>
             <View style={styles.section}>
-                <Text style={styles.subtitle}>Skills</Text>
+                <Text style={styles.sectionTitle}>Skills</Text>
                 {Object.entries(DATA.skills).map(([category, skillList]) => (
                     <View key={category} style={{ marginBottom: 10 }}>
-                        <Text style={[styles.text, styles.bold]}>{category}:</Text>
-                        <Text style={styles.text}>
+                        <Text style={styles.skillCategory}>{category}</Text>
+                        <Text style={styles.skillList}>
                             {skillList.map(skill => skill.name).join(', ')}
                         </Text>
                     </View>
                 ))}
             </View>
+        </Page>
+        <Page size="A4" style={styles.page}>
             <View style={styles.section}>
-                <Text style={styles.subtitle}>References</Text>
-                {DATA.references.map((ref) => (
-                    <View key={ref.name} style={styles.referenceItem}>
-                        <Text style={[styles.text, styles.bold]}>{ref.name} - {ref.title}</Text>
-                        <Text style={styles.text}>{ref.company}</Text>
-                        <Text style={styles.text}>{ref.description}</Text>
-                        {ref.links.map((link) => (
-                            <Text key={link.title} style={styles.text}>
-                                <Text style={styles.bold}>{link.title}:</Text> {formatLink(link.title, link.href)}
-                            </Text>
-                        ))}
-                    </View>
-                ))}
-            </View>
-            <View style={styles.section}>
-                <Text style={styles.subtitle}>Personality Profile</Text>
-                {Object.entries(DATA.personality).map(([key, value]) => (
-                    <View key={key} style={{ marginBottom: 10 }}>
-                        <Text style={[styles.text, styles.bold]}>{value.type} - {value.title}</Text>
-                        <Text style={styles.text}>{value.description}</Text>
-                        <Text style={styles.text}>Attributes: {value.attributes.join(', ')}</Text>
+                <Text style={styles.sectionTitle}>References</Text>
+                {DATA.references.map((reference) => (
+                    <View key={reference.name} style={styles.experienceItem}>
+                        <Text style={styles.jobTitle}>{reference.name}</Text>
+                        <Text style={styles.jobDetails}>{reference.title} | {reference.company}</Text>
+                        <Text style={styles.jobDescription}>
+                            {reference.description || ''}
+                        </Text>
                     </View>
                 ))}
             </View>
