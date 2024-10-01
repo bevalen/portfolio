@@ -92,7 +92,7 @@ const ResumePDF = () => (
         <Page size="A4" style={styles.page}>
             <View style={styles.header}>
                 <Text style={styles.name}>{DATA.name}</Text>
-                <Text style={styles.title}>US Marine | Technology Entrepreneur | Strategic Problem Solver</Text>
+                <Text style={styles.title}>US Marine | Tech Entrepreneur | Strategic Problem Solver</Text>
             </View>
             <View style={styles.section}>
                 <Text style={styles.sectionTitle}>Professional Summary</Text>
