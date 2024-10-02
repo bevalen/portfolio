@@ -13,7 +13,7 @@ export const DATA = {
     "US Marine turned tech entrepreneur. Passionate about building things and solving problems. Strategic thinker with a track record of consistently hitting ambitious goals.",
   summary:
     "Experienced entrepreneur and strategic thinker with a background in software engineering, sales, and marketing. As a United States Marine, I am committed to achieving results and consistently hitting goals. I have founded and led multiple startups, including ValCinema, WedLaunch, and FilmFlow, where I built innovative products and grew revenues past $1M annually. My technical skills include Typescript, React/Next.js, and Python, among others. I thrive in fast-paced environments and excel in product management, agile development, team leadership, and operational management.",
-  avatarUrl: "/me.png",
+  avatarUrl: "/me1.png",
   skills: {
     Technical: [
       { name: "HTML", description: "Proficient in semantic markup and accessibility best practices." },
@@ -304,6 +304,7 @@ export const DATA = {
       description: "ValCinema is a national wedding photo + video company.",
       accomplishments: [
         "Founded ValCinema, a national wedding photo + video company and built a successful national online wedding business.",
+        "Grew the company from $0 at startup to over $1M in annual revenue within 4 years.",
         "Increased the monthly revenue by 300% year over year",
         "Developed operations to manage upwards of 99 weddings/month nationally",
         "Built a system to manage 300+ contractors nationally",
