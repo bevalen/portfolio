@@ -173,7 +173,7 @@ export const DATA = {
       description:
         "Wedding vendor marketing agency.",
       accomplishments: [
-        "Successfully built a custom web scraper using Python to scrape leads from various online sources, collecting over 30,000 leads.",
+        "Developed a custom web scraper using Python to scrape leads from various online sources, collecting over 30,000 leads.",
         "Launched a new client acquisition system for WedLaunch utilizing a custom built webscraper, significantly enhancing lead generation and outreach efforts.",
         "Designed, developed & launched Wedly, the wedding vendor marketplace for WedLaunch, using Next JS, Python, Stripe, Supabase, OpenAI & Google Maps API",
         "Implemented a custom CRM tailored for wedding vendors to streamline lead management.",
@@ -282,7 +282,7 @@ export const DATA = {
       title: "Infantry",
       logoUrl: "/usmc.png",
       start: "2019",
-      end: "2023",
+      end: "Present",
       description: "Served 5 years in the United States Marine Corps Infantry, gaining extensive training and experience in various operational environments.",
       accomplishments: [
         "Received a meritorious promotion at The School of Infantry and served as a team leader, demonstrating leadership and operational excellence.",
