@@ -14,26 +14,6 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { DownloadIcon, ShareIcon } from "lucide-react";
 import { useState } from 'react';
-import { format } from 'date-fns'; // Add this import at the top of the fil
-
-const handleDownloadResume = async () => {
-  try {
-    const response = await fetch('/api/generate-resume');
-    if (!response.ok) throw new Error('Failed to generate resume');
-    const blob = await response.blob();
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "resume.pdf";
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-  } catch (error) {
-    console.error('Error downloading resume:', error);
-    // Handle error (e.g., show a notification to the user)
-  }
-};
 
 export default function Navbar() {
   const [isGenerating, setIsGenerating] = useState(false);
@@ -48,10 +28,8 @@ export default function Navbar() {
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;
-      
       // Generate the filename with the current date
-      const currentDate = format(new Date(), 'yyyy-MM-dd');
-      a.download = `Ben Valentin's Resume - ${currentDate}.pdf`;
+      a.download = `Ben Valentin's Resume.pdf`;
       
       document.body.appendChild(a);
       a.click();
