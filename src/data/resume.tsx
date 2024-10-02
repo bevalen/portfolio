@@ -32,6 +32,10 @@ export const DATA = {
       { name: "Responsive Web Design", description: "Ensured optimal user experience across devices and screen sizes." },
       { name: "No-code Prototyping", description: "Rapid prototyping using tools like Zapier, Airtable and Softr." },
       { name: "Streamlit", description: "Developed interactive web applications for data manipulation and formatting using Streamlit." },
+    { name: "Web Scraping", description: "Proficient in using Python libraries such as BeautifulSoup and Scrapy for extracting data from websites." },
+    { name: "BeautifulSoup", description: "Utilized for parsing HTML and XML documents to extract data from web pages." },
+    { name: "Requests", description: "Skilled in making HTTP requests to retrieve web content for scraping." },
+    { name: "Pandas", description: "Used for data manipulation and analysis after scraping data from websites." },
     ],
     Sales: [
       { name: "Sales Strategy", description: "Developed and executed comprehensive sales strategies for startups and established businesses." },
@@ -169,6 +173,8 @@ export const DATA = {
       description:
         "Wedding vendor marketing agency.",
       accomplishments: [
+        "Successfully built a custom web scraper using Python to scrape leads from various online sources, collecting over 30,000 leads.",
+        "Launched a new client acquisition system for WedLaunch utilizing a custom built webscraper, significantly enhancing lead generation and outreach efforts.",
         "Designed, developed & launched Wedly, the wedding vendor marketplace for WedLaunch, using Next JS, Python, Stripe, Supabase, OpenAI & Google Maps API",
         "Implemented a custom CRM tailored for wedding vendors to streamline lead management.",
         "Designed and launched high-converting landing pages for multiple vendors, increasing lead generation.",
