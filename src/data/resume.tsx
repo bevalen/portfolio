@@ -162,7 +162,7 @@ export const DATA = {
       href: "https://wedlaunch.com/",
       badges: [],
       location: "Cumming, GA",
-      title: "Senior Developer",
+      title: "Lead Developer",
       logoUrl: "/wedlaunch.png",
       start: "2023",
       end: "Present",
@@ -183,7 +183,7 @@ export const DATA = {
       href: "https://benvalentin.me/",
       badges: [],
       location: "Cumming, GA",
-      title: "Senior Developer",
+      title: "Lead Developer",
       logoUrl: "/vgc.png",
       start: "2021",
       end: "Present",
@@ -198,6 +198,26 @@ export const DATA = {
         "Implemented automated sales follow-up for clients",
         "Automated advertising campaign lead entry",
       ],
+    },
+    {
+      company: "FilmFlow, Inc",
+      href: "https://filmflow.ai/",
+      badges: [],
+      location: "Cumming, GA",
+      title: "Lead Developer",
+      logoUrl: "/filmflow.png",
+      start: "2022",
+      end: "2023",
+      description: "FilmFlow is an AI tech startup that allows filmmakers to write their screenplay with AI.",
+      accomplishments: [
+        "Raised $200,000 from angel investors",
+        "Built the entire application using React JS, implementing OpenAI functionality",
+        "Developed and maintained scalable front-end architecture to support high traffic",
+        "Collaborated with cross-functional teams to define, design, and ship new features",
+        "Built & launched the MVP product within 30 days",
+        "Acquired 300 pilot users",
+        "Produced the first AI written short film"
+      ]
     },
     {
       company: "GetDoctor",
@@ -216,26 +236,6 @@ export const DATA = {
         "Rebuilt the marketing funnel for acquiring new clients.",
         "Built the CRM pipelines for the sales department.",
         "Successfully migrated the entire software team from Jira to ClickUp."
-      ]
-    },
-    {
-      company: "FilmFlow, Inc",
-      href: "https://filmflow.ai/",
-      badges: [],
-      location: "Cumming, GA",
-      title: "Senior Developer",
-      logoUrl: "/filmflow.png",
-      start: "2022",
-      end: "2023",
-      description: "FilmFlow is an AI tech startup that allows filmmakers to write their screenplay with AI.",
-      accomplishments: [
-        "Raised $200,000 from angel investors",
-        "Built the entire application using React JS, implementing OpenAI functionality",
-        "Developed and maintained scalable front-end architecture to support high traffic",
-        "Collaborated with cross-functional teams to define, design, and ship new features",
-        "Built & launched the MVP product within 30 days",
-        "Acquired 300 pilot users",
-        "Produced the first AI written short film"
       ]
     },
     {
