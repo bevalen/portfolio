@@ -159,7 +159,7 @@ export const DATA = {
       company: "WedLaunch",
       href: "https://wedlaunch.com/",
       badges: [],
-      location: "Atlanta, GA",
+      location: "Cumming, GA",
       title: "Founder & CEO",
       logoUrl: "/wedlaunch.png",
       start: "2023",
@@ -167,10 +167,12 @@ export const DATA = {
       description:
         "Wedding vendor marketing agency.",
       accomplishments: [
-        "Raised $200,000 from angel investors",
-        "Built & launched the MVP product within 6 weeks using React & Tailwind",
-        "Acquired 300 pilot users",
-        "Produced the first AI-written short film"
+        "Implemented a custom CRM tailored for wedding vendors to streamline lead management.",
+        "Designed and launched high-converting landing pages for multiple vendors, increasing lead generation.",
+        "Automated follow-up processes to enhance client engagement and appointment scheduling.",
+        "Implemented a fully managed marketing service that resulted in a 50% increase in client bookings.",
+        "Created targeted marketing campaigns that improved vendor visibility and client acquisition.",
+        "Provided ongoing support and training for vendors to maximize the effectiveness of their marketing tools."
       ]
     },
     {
@@ -203,11 +205,12 @@ export const DATA = {
       end: "2023",
       description: "GetDoctor is a medical tech startup focused on improving the patient intake experience.",
       accomplishments: [
-        "Automated the appointment booking process for clients",
-        "Built no-code prototypes to test with users prior to building with code",
-        "Made key hires in expanding the growth team",
-        "Built the SOP's for product requirement documentation",
-        "Successfully migrated software team from Jira to ClickUp"
+        "Automated appointment booking process and developed SOPs for product requirement documentation.",
+        "Introduced project management tools to keep the team organized.",
+        "Made key hires in expanding the growth team.",
+        "Rebuilt the marketing funnel for acquiring new clients.",
+        "Built the CRM pipelines for the sales department.",
+        "Successfully migrated the entire software team from Jira to ClickUp."
       ]
     },
     {
@@ -268,10 +271,11 @@ export const DATA = {
       end: "2023",
       description: "Served 5 years in the United States Marine Corps Infantry, gaining extensive training and experience in various operational environments.",
       accomplishments: [
-        "Received a meritorious promotion at The School of Infantry",
-        "Served as a team leader",
-        "Completed combat medical training",
-        "Demonstrated leadership and operational excellence"
+        "Received a meritorious promotion at The School of Infantry and served as a team leader, demonstrating leadership and operational excellence.",
+        "Completed the TCCC Combat Medical certification program, acquiring critical skills in emergency response and battlefield medicine.",
+        "Achieved first-class physical fitness test scores.",
+        "Achieved first-class marksmanship test scores.",
+        "Promoted to Team Leader position within first year."
       ]
     },
     {
@@ -285,13 +289,13 @@ export const DATA = {
       end: "2021",
       description: "ValCinema is a national wedding photo + video company.",
       accomplishments: [
-        "Successfully sold the business four years after building from the ground up",
+        "Founded ValCinema, a national wedding photo + video company and built a successful national online wedding business.",
         "Increased the monthly revenue by 300% year over year",
         "Developed operations to manage upwards of 99 weddings/month nationally",
         "Built a system to manage 300+ contractors nationally",
         "Developed procedures to manage up to 100+ weddings per month nationally",
         "Automated all marketing, lead-qualifying, and sales appointment scheduling",
-        "Managed all copywriting for email marketing, web pages & sales material"
+        "Managed all copywriting for email marketing, web pages, sales material, etc."
       ]
     },
     {
