@@ -206,6 +206,24 @@ export const DATA = {
       ],
     },
     {
+      company: "United States Marine Corps",
+      href: "https://www.marines.com",
+      badges: [],
+      location: "Cumming, GA",
+      title: "Infantry",
+      logoUrl: "/usmc.png",
+      start: "2019",
+      end: "Present",
+      description: "Served 5 years in the United States Marine Corps Infantry, gaining extensive training and experience in various operational environments.",
+      accomplishments: [
+        "Received a meritorious promotion at The School of Infantry and served as a squad leader responsible for 12 Marines, demonstrating leadership and operational excellence.",
+        "Completed the TCCC Combat Medical certification program, acquiring critical skills in emergency response and battlefield medicine.",
+        "Achieved first-class physical fitness test scores.",
+        "Achieved first-class marksmanship test scores.",
+        "Promoted to Team Leader position within first year."
+      ]
+    },
+    {
       company: "FilmFlow, Inc",
       href: "https://filmflow.ai/",
       badges: [],
@@ -272,24 +290,6 @@ export const DATA = {
         "Spearheaded the formulation and optimization of Band of Coders' sales procedures",
         "Played a pivotal role in talent acquisition by strategically hiring key employees",
         "Engineered and implemented streamlined operational processes",
-      ]
-    },
-    {
-      company: "United States Marine Corps",
-      href: "https://www.marines.com",
-      badges: [],
-      location: "Cumming, GA",
-      title: "Infantry",
-      logoUrl: "/usmc.png",
-      start: "2019",
-      end: "Present",
-      description: "Served 5 years in the United States Marine Corps Infantry, gaining extensive training and experience in various operational environments.",
-      accomplishments: [
-        "Received a meritorious promotion at The School of Infantry and served as a team leader, demonstrating leadership and operational excellence.",
-        "Completed the TCCC Combat Medical certification program, acquiring critical skills in emergency response and battlefield medicine.",
-        "Achieved first-class physical fitness test scores.",
-        "Achieved first-class marksmanship test scores.",
-        "Promoted to Team Leader position within first year."
       ]
     },
     {
