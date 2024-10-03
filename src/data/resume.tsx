@@ -335,14 +335,17 @@ export const DATA = {
     {
       school: "Florida School of Discipleship (Masters Commission)",
       href: "https://mastersusa.com/",
-      degree: "Studied Music & Ministry",
+      degree: "Studied Music & Leadership",
       logoUrl: "",
       start: "2011",
       end: "2015",
       description:
-        "Masters Commission is hands on discipleship training school. I studied music and traveled nationally with a worship band.",
+        "Masters Commission is a hands-on discipleship training school where I studied music, leadership, and management while traveling nationally with a worship band.",
       accomplishments: [
-        "Studied music and traveled nationally with a worship band",
+        "Led the School of Music department, responsible for multiple bands and developing course curriculum",
+        "Managed the finances and budgets for the touring band",
+        "Taught music to peers and younger students, enhancing their skills and confidence",
+        "Developed leadership skills through practical experiences in ministry and team management"
       ]
     }
   ],
