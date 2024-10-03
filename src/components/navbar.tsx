@@ -13,7 +13,7 @@ import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { DownloadIcon, ShareIcon } from "lucide-react";
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 
 export default function Navbar() {
   const [isGenerating, setIsGenerating] = useState(false);
@@ -62,6 +62,10 @@ export default function Navbar() {
     }
   };
 
+  const handleSocialClick = useCallback((url: string) => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  }, []);
+
   return (
     <div className="pointer-events-none fixed inset-x-0 bottom-0 z-30 mx-auto mb-4 flex origin-bottom h-full max-h-14">
       <div className="fixed bottom-0 inset-x-0 h-16 w-full bg-background to-transparent backdrop-blur-lg [-webkit-mask-image:linear-gradient(to_top,black,transparent)] dark:bg-background"></div>
@@ -93,15 +97,15 @@ export default function Navbar() {
             <DockIcon key={name}>
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <Link
-                    href={social.url}
+                  <button
+                    onClick={() => handleSocialClick(social.url)}
                     className={cn(
                       buttonVariants({ variant: "ghost", size: "icon" }),
                       "size-12"
                     )}
                   >
                     <social.icon className="size-4" />
-                  </Link>
+                  </button>
                 </TooltipTrigger>
                 <TooltipContent>
                   <p>{name}</p>
