@@ -188,8 +188,8 @@ export default function Page() {
           </BlurFade>
           <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
             {DATA.projects.map((project, id) => (
-              <li key={project.title}>
-                <BlurFade delay={BLUR_FADE_DELAY * 15 + id * 0.05}>
+              <li key={project.title} className="flex">
+                <BlurFade delay={BLUR_FADE_DELAY * 15 + id * 0.05} className="flex-grow">
                   <ProjectCard
                     href={project.href}
                     title={project.title}

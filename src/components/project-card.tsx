@@ -83,7 +83,7 @@ export function ProjectCard({
           </Markdown>
         </div>
       </CardHeader>
-      <CardContent className="mt-auto flex flex-col px-2">
+      <CardContent className="flex-grow flex flex-col px-2">
         {tags && tags.length > 0 && (
           <div className="mt-2 flex flex-wrap gap-1">
             {tags?.map((tag) => (
