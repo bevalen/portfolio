@@ -79,7 +79,7 @@ export const ResumeCard = ({
                 />
               </h3>
               <div className="text-xs sm:text-sm tabular-nums text-muted-foreground text-right">
-                {period}
+                <time dateTime={period}>{period}</time>
               </div>
             </div>
             {subtitle && <div className="font-sans text-xs">{subtitle}</div>}
